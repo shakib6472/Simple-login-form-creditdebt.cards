@@ -1,5 +1,4 @@
- 
-.login-form-container { 
+.login-form-container {
   max-width: 100%;
 }
 .login-form-container a {
@@ -11,8 +10,8 @@
   text-decoration: underline;
 }
 
-.login-form-container form { 
-  padding: 30px; 
+.login-form-container form {
+  padding: 30px;
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -110,8 +109,25 @@
   color: #fff;
   cursor: pointer;
   transition: all 0.3s;
+  line-height: 23px;
 }
 .login-form-container form .button-form-group .submit-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.loginprime-form .submit-btn {
+  margin: 0px 0 5px 0;
+  height: 40px;
+  background-color: #007bff;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  line-height: 18px;
+}
+.loginprime-form .submit-btn:hover {
   background-color: #0056b3;
 }
 
@@ -120,10 +136,115 @@
   font-size: 20px;
   margin: 10px 0;
   display: none;
+  transition: all 0.3s;
 }
 .loginprme-success {
-    color: green;
-    font-size: 20px;
-    margin: 10px 0;
-    display: none;
+  color: green;
+  font-size: 20px;
+  margin: 10px 0;
+  display: none;
+}
+
+/*
+* Login Prime Registration Form
+*/
+
+ 
+.loginprime-form #image_preview{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover; 
+  border: 1px solid #ccc;
+}
+
+.loginprime-form-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.loginprime-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-grid div {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginprime-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.loginprime-form input,
+.loginprime-form textarea,
+.loginprime-form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loginprime-form textarea {
+  resize: none;
+}
+
+.image-upload-container {
+  grid-column: span 2;
+}
+
+.form-submit {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.submit-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+body .container .img-avatar img {
+  border-radius: 50%;
+  border: 2px solid #000;
+  padding: 5px;
+  margin: 0 auto;
+}
+body .container .img-avatar {
+  position: relative;
+}
+body .container .img-avatar i {
+  position: absolute;
+  bottom: 10px;
+  left: 53%;
+  font-size: 25px;
+  background-color: #d8d8d8;
+  padding: 6px;
+  border-radius: 50px;
 }
