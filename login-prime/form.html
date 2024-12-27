@@ -8,176 +8,255 @@
       src="https://kit.fontawesome.com/46882cce5e.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
   </head>
+  <style>
+    .container {
+      margin-top: 50px;
+    }
+
+    .img-avatar img {
+      border-radius: 50%;
+      border: 2px solid #000;
+      padding: 5px;
+    }
+    .img-avatar {
+      position: relative;
+    }
+    .img-avatar i {
+      position: absolute;
+      bottom: 10px;
+      left: 53%;
+      font-size: 25px;
+      background-color: #d8d8d8;
+      padding: 6px;
+      border-radius: 50px;
+    }
+  </style>
   <body>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: #fffafa;
-        font-family: Arial, sans-serif;
-        box-sizing: border-box;
-      }
-      .login-form-container {
-        width: 100%;
-        max-width: 1120px;
-      }
-      .login-form-container a {
-        text-decoration: none;
-        color: #4079c8;
-      }
-        .login-form-container a:hover {
-            text-decoration: underline;
-        }
-
-      .login-form-container form {
-        border: 1px solid #ccc;
-        padding: 30px;
-        width: 100%;
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-      }
-      .login-form-container form .lp-form-group {
-        margin-bottom: 20px;
-        border-radius: 4px;
-        padding: 15px;
-        display: block;
-        width: 33%;
-      }
-
-      .login-form-container form .lp-form-group .tooltip {
-        font-size: 15px;
-        margin-bottom: 4px;
-      }
-      .login-form-container form .lp-form-group label {
-        font-size: 18px;
-        margin-bottom: 4px;
-      }
-      .login-form-container form .lp-form-group .lp-boreder-box {
-        display: flex;
-        align-items: center;
-        margin: 5px 0;
-        gap: 8px;
-        border: 1px solid #ccc;
-      }
-      .login-form-container form .lp-form-group .lp-boreder-box .icon {
-        font-size: 20px;
-        z-index: 5;
-        margin-left: 10px;
-      }
-      .login-form-container form .lp-form-group .lp-boreder-box input {
-        height: 40px;
-        width: 100%;
-        outline: none;
-        font-size: 16px;
-        border-radius: 3px;
-        border: none;
-        padding: 0 0 0 7px;
-      }
-      .login-form-container form .lp-form-group .remember-me-label {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
-        position: relative;
-      }
-      .login-form-container form .lp-form-group input[type="checkbox"] {
-        appearance: none;
-        -webkit-appearance: none;
-        width: 15px;
-        height: 15px;
-        border: 2px solid #007bff;
-        border-radius: 4px;
-        background-color: white;
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-      }
-      .login-form-container form .lp-form-group input[type="checkbox"]:checked {
-        background-color: #007bff;
-        border-color: #007bff;
-      }
-      /* Style for when the checkbox is checked */
-
-      .tooltip i {
-        border: 1px solid #ccc;
-        border-radius: 50px;
-        padding: 5px;
-        font-size: 11px;
-        width: 10px;
-        height: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 5px;
-        margin-left: 5px;
-      }
-
-      .login-form-container form .button-form-group {
-        margin-bottom: 20px;
-        border-radius: 4px;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        width: 24%;
-      }
-      .login-form-container form .button-form-group .submit-btn { 
-        margin: 25px 0 5px 0; 
-        height: 40px;
-        background-color: #007bff;
-        border: none;
-        font-size: 23px;
-        color: #fff;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-        .login-form-container form .button-form-group .submit-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    <div class="login-form-container">
-      <form class="login-form" action=" " method="post">
-        <div class="lp-form-group">
-          <label for="username"> Username</label>
-          <div class="lp-boreder-box">
-            <span class="icon"><i class="fas fa-user"></i></span>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Username"
-            />
+    <div class="container">
+      <div class="heading">
+        <h3>Profile</h3>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="img text-center">
+            <div class="img-avatar">
+              <img
+                src="https://www.w3schools.com/howto/img_avatar.png"
+                alt=""
+                height="150px"
+                width="150px"
+              />
+              <!-- edit icon -->
+              <i class="fa-solid fa-pen-to-square"></i>
+              <input
+                type="file"
+                name="profile_image"
+                id="profile_image"
+                class="d-none"
+              />
+            </div>
           </div>
-          <label for="rememberme" class="remember-me-label">
-            <input type="checkbox" id="rememberme" name="remember-me" />
-            Remember me
-            <span class="tooltip"><i class="fas fa-info"></i></span>
-          </label>
         </div>
-        <div class="lp-form-group">
-          <label for="password"> Password</label>
-          <div class="lp-boreder-box">
-            <span class="icon">🔒</span>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-            />
+      </div>
+      <div class="row mt-4">
+        <div class="name">
+          <div class="col-md-12">
+            <div class="form-group mb-3">
+              <label class="mb-2" for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+              />
+            </div>
           </div>
-          <a href="#" class="forgot-link">Forgot username or password?</a>
         </div>
-        <div class="button-form-group"> 
-          <button type="submit" class="submit-btn">Sign in</button>
-          <a href="#" class="register-link">Don't have any account? Register</a>
+      </div>
+      <div class="row">
+        <div class="heading">
+          <h4>Address</h4>
         </div>
-      </form>
-      <div class="extras"></div>
+        <div class="form-group mb-3">
+          <label class="mb-2" for="">Residential Address</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="raddress"
+            placeholder="Enter your Residential Address"
+          ></textarea>
+        </div>
+        <div class="form-group mb-3">
+          <label class="mb-2" for="pmaddress">Primary Mailing Address</label>
+          <textarea
+            type="text"
+            class="form-control"
+            id="pmaddress"
+            placeholder="Enter your Primary Mailing Address"
+          ></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <div class="heading">
+          <h4>Phone</h4>
+        </div>
+        <div class="form-group mb-3">
+          <label class="mb-2" for="mobile">Mobile</label>
+          <input
+            type="text"
+            class="form-control"
+            id="mobile"
+            placeholder="Enter your Mobile Number"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label class="mb-2" for="work">Work Mobile</label>
+          <input
+            type="text"
+            class="form-control"
+            id="work"
+            placeholder="Enter your Work Mobile Number"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="heading">
+          <h4>Personal Email</h4>
+        </div>
+        <div class="form-group mb-3">
+          <label class="mb-2" for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your Mobile Number"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label class="mb-2" for="amail">Additional Mail</label>
+          <input
+            type="text"
+            class="form-control"
+            id="amail"
+            placeholder="Enter your Work Mobile Number"
+          />
+        </div>
+      </div>
+      <!-- Save button -->
+      <div class="row">
+        <div class="loginprme-error mb-3"></div>
+        <div class="loginprme-success mb-3"></div>
+
+        <div class="col-md-12 text-center">
+          <button class="btn btn_save_profile btn-primary w-100">Save</button>
+        </div>
+      </div>
     </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        // Add event listener to save button
+        $(".btn_save_profile").on("click", function () {
+          // Get all the values
+          var name = $("#name").val();
+          var raddress = $("#raddress").val();
+          var pmaddress = $("#pmaddress").val();
+          var mobile = $("#mobile").val();
+          var work = $("#work").val();
+          var email = $("#email").val();
+          var amail = $("#amail").val();
+          var profile_image = $('#profile_image')[0].files[0];
+
+          // Check if all the fields are filled
+          if (name != "") {
+            if (raddress != "") {
+              if (pmaddress != "") {
+                if (mobile != "") {
+                  if (work != "") {
+                    if (email != "") {
+                      if (amail != "") {
+                        // Save the data
+
+                        var form_data = new FormData();
+                        form_data.append('action', 'login_prime_save_profile');
+                        form_data.append('name', name);
+                        form_data.append('raddress', raddress);
+                        form_data.append('pmaddress', pmaddress);
+                        form_data.append('mobile', mobile);
+                        form_data.append('work', work);
+                        form_data.append('email', email);
+                        form_data.append('amail', amail);
+                        form_data.append('profile_image', profile_image);
+
+
+                        $.ajax({
+                          url: "http://localhost/boostdeve/wp-admin/admin-ajax.php",
+                          type: "POST",
+                          data: {
+                            form_data,
+                          },
+                          success: function (response) {
+                            if (response == "success") {
+                              $(".loginprme-success").text("Profile Saved");
+                            } else {
+                              $(".loginprme-error").text(
+                                "Error Saving Profile"
+                              );
+                            }
+                          },
+                        });
+                      } else {
+                        $(".loginprme-error").text(
+                          "Please Enter Additional Mail"
+                        );
+                      }
+                    } else {
+                      $(".loginprme-error").text("Please Enter Email");
+                    }
+                  } else {
+                    $(".loginprme-error").text("Please Enter Work Mobile");
+                  }
+                } else {
+                  $(".loginprme-error").text("Please Enter Mobile");
+                }
+              } else {
+                $(".loginprme-error").text(
+                  "Please Enter Primary Mailing Address"
+                );
+              }
+            } else {
+              $(".loginprme-error").text("Please Enter Residential Address");
+            }
+          } else {
+            $(".loginprme-error").text("Please Enter Your Name");
+          }
+        });
+        $(".img-avatar img, .img-avatar i").on("click", function () {
+          $("#profile_image").click();
+        });
+        // After selectiog the image show the preview
+        $("#profile_image").on("change", function () {
+          var file = this.files[0];
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $(".img-avatar img").attr("src", e.target.result);
+          };
+          reader.readAsDataURL(file);
+        });
+      });
+    </script>
   </body>
 </html>
